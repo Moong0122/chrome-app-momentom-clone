@@ -1,11 +1,16 @@
-# chrome-app-momentom-clone
-구글 확장 프로그램 모멘텀(momentum)을 직접 만들어보기!
+# momentom-clone
+구글 확장 프로그램 모멘텀(momentum)을 직접 만들어보기
 
+## What is momentom?
+momentom is developed on the basis of momentum
 
-### :computer:  작업 환경
+https://momentumdash.com/
 
-1. macOS Catalina
-2. Visual Studio Code
+## Develop Environments
 
-### 결과 
+* macOS Catalina
+* Visual Studio Code
+* Chrome
+
+## My result!
 https://moong0122.github.io/chrome-app-momentom-clone/
