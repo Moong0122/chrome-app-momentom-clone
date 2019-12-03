@@ -12,6 +12,8 @@ body {
   color: white;
   display: block;
   text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
   font-size: 20px;
 }
 
@@ -62,6 +64,29 @@ body {
 
 .showing {
   display: block;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+input:first-child {
+  /* [type="text"] */
+  /* text 상자를 투명하게 만들어주는 효과 */
+  color: white;
+  padding-bottom: 10px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  /* font-size: 30px; */
+  color: white;
 }
 
 @keyframes fadeIn {
