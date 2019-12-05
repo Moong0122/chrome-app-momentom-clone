@@ -6,25 +6,37 @@ body {
 body {
   margin: 0px;
   color: #34495e;
-  display: flex;
-  flex-direction: column;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  /* 세로 정렬을 마무리 하고 주석 처리 해준다 */
+  width: 10px;
+  background-color: yellow;
+  vertical-align: middle;
 }
 
 .js-weather {
   color: white;
-  display: block;
   text-align: right;
   padding-top: 10px;
   padding-right: 10px;
   font-size: 20px;
+  display: block;
+  float: right;
 }
 
 .js-clock {
   text-align: center;
   font-size: 70px;
   color: white;
-  flex-direction: row;
-  align-self: center;
+
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  /* width: 100px; */
+  /* 세로 정렬을 위해서 width 조절 */
 }
 
 .js-clock h1 {
