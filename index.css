@@ -1,20 +1,8 @@
 html,
 body {
   height: 100%;
-}
-
-body {
+  widows: 100%;
   margin: 0px;
-  color: #34495e;
-}
-
-.helper {
-  display: inline-block;
-  height: 100%;
-  /* 세로 정렬을 마무리 하고 주석 처리 해준다 */
-  width: 10px;
-  background-color: yellow;
-  vertical-align: middle;
 }
 
 .js-weather {
@@ -24,28 +12,19 @@ body {
   padding-right: 10px;
   font-size: 20px;
   display: block;
-  float: right;
 }
 
 .js-clock {
-  text-align: center;
   font-size: 70px;
   color: white;
-
-  display: inline-block;
-  vertical-align: middle;
-  width: 100px;
-  /* 세로 정렬을 위해서 width 조절 */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .js-clock h1 {
   margin-top: 0px;
   margin-bottom: 0px;
-}
-
-.js-form {
-  display: inline-block;
-  width: 500px;
 }
 
 .js-greetings {
@@ -64,6 +43,7 @@ body {
   padding: 0px;
   color: white;
   font-size: 20px;
+  display: inline-block;
 }
 
 .js-toDoList {
@@ -85,7 +65,6 @@ body {
 .showing {
   display: block;
   text-align: center;
-  padding-bottom: 15px;
 }
 
 /* 두개의 input 태그 개별로 선택하는 방법 공부필요 */
@@ -112,6 +91,48 @@ input:focus {
 input::placeholder {
   /* font-size: 30px; */
   color: white;
+}
+
+div {
+  float: left;
+}
+#div1 {
+  height: 10%;
+  width: 100%;
+}
+#div2 {
+  height: 40%;
+  width: 100%;
+}
+#div3 {
+  height: 40%;
+  width: 100%;
+}
+#div4 {
+  height: 10%;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  #div1 {
+    width: 100%;
+    height: 25%;
+  }
+
+  #div2 {
+    width: 50%;
+    height: 50%;
+  }
+
+  #div3 {
+    width: 50%;
+    height: 50%;
+  }
+
+  #div4 {
+    width: 100%;
+    height: 25%;
+  }
 }
 
 @keyframes fadeIn {
