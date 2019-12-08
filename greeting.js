@@ -2,8 +2,17 @@ const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
   greeting = document.querySelector(".js-greetings");
 
+var greetMessage = ["Hello", "Have a nice day", "You're doing great"],
+  MS_NUMBER = 3;
+
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
+
+function randomNum() {
+  const number = Math.floor(Math.random() * MS_NUMBER);
+  // console.log(number);
+  return number;
+}
 
 function saveName(text) {
   localStorage.setItem(USER_LS, text);
@@ -25,7 +34,7 @@ function askForName() {
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText = `Hello, ${text}`;
+  greeting.innerText = greetMessage[randomNum()] + `, ${text}`;
 }
 
 function loadName() {
