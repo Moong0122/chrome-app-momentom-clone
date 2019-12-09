@@ -66,6 +66,11 @@ body {
 
 .showing {
   display: inline-block;
+  transition: background-color 0.5s;
+}
+
+.showing:hover {
+  background-color: paleturquoise;
 }
 
 /* 두개의 input 태그 개별로 선택하는 방법 공부필요 */
