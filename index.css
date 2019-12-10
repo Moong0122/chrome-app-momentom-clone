@@ -66,10 +66,14 @@ body {
 
 .showing {
   display: inline-block;
-  transition: background-color 0.5s;
 }
 
-.showing:hover {
+.showing_hv {
+  background-color: transparent;
+}
+
+.showing_hv:hover {
+  transition: background-color 0.5s;
   background-color: paleturquoise;
 }
 
