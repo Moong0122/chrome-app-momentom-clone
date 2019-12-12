@@ -2,6 +2,7 @@ const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
   greeting = document.querySelector(".js-greetings"),
   userName = document.getElementById("changeName"),
+  remainName = document.getElementById("myName"),
   nameBlank = "\u00A0";
 
 var greetMessage = ["Hello", "Have a nice day", "You're doing great"],
@@ -19,6 +20,12 @@ function randomNum() {
 
 function userLogout() {
   localStorage.removeItem(USER_LS);
+  form.classList.add(SHOWING_CN);
+  greeting.classList.remove(SHOWING_CN);
+  userName.classList.remove(SHOWING_CN);
+  userName.classList.remove(SHOWING_HOVER);
+  // console.log(remainName.value);
+  remainName.value = null;
 }
 
 function saveName(text) {
@@ -28,7 +35,6 @@ function saveName(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = input.value;
-  console.log(currentValue);
   paintGreeting(currentValue);
   saveName(currentValue);
 }
