@@ -44,8 +44,10 @@ body {
   text-align: center;
   padding: 0px;
   color: white;
-  font-size: 20px;
+  font-size: 35px;
   display: inline-block;
+  width: 60%;
+  text-align: left;
 }
 
 .js-toDoList {
@@ -118,6 +120,7 @@ div {
 #div3 {
   height: 40%;
   width: 100%;
+  text-align: center;
 }
 #div4 {
   height: 10%;
@@ -139,6 +142,7 @@ div {
   #div3 {
     width: 50%;
     height: 50%;
+    text-align: center;
   }
 
   #div4 {
