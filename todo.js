@@ -25,6 +25,7 @@ function saveToDos() {
 }
 
 function paintToDO(text) {
+  // console.log(text);
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
   const span = document.createElement("span");
@@ -41,13 +42,14 @@ function paintToDO(text) {
     id: newId
   };
   toDos.push(toDoObj);
+  console.log(localStorage.length);
   saveToDos();
 }
 
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
-  paintToDO(currentValue);
+  if (currentValue != "") paintToDO(currentValue);
   toDoInput.value = "";
 }
 
