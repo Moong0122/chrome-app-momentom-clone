@@ -51,11 +51,8 @@ function paintToDO(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
-  if (cnt < 5) {
-    if (currentValue != "") {
-      cnt++;
-      paintToDO(currentValue);
-    }
+  if (cnt < 5 && currentValue != "") {
+    paintToDO(currentValue);
   } else alert("just 5 List!!!");
   toDoInput.value = "";
 }
