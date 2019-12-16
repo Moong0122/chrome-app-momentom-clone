@@ -44,7 +44,7 @@ function paintToDO(text) {
     id: newId
   };
   toDos.push(toDoObj);
-  // console.log(cnt);
+  console.log(cnt);
   saveToDos();
 }
 
