@@ -1,6 +1,7 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
   toDoInput = toDoForm.querySelector("input"),
-  toDoList = document.querySelector(".js-toDoList");
+  toDoList = document.querySelector(".js-toDoList"),
+  themeList = ["🌘", "🌗", "🌖", "🌔", "🌓", "🌒"];
 
 const TODOS_LS = "toDos";
 let toDos = [],
@@ -32,7 +33,7 @@ function paintToDO(text) {
   const delBtn = document.createElement("span");
   const span = document.createElement("span");
   const newId = toDos.length + 1;
-  delBtn.innerText = "⭐";
+  delBtn.innerText = themeList[cnt];
   delBtn.addEventListener("click", deleteToDo);
   span.innerText = ` ${text}`;
   li.appendChild(delBtn);
@@ -51,9 +52,10 @@ function paintToDO(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
-  if (cnt < 5 && currentValue != "") {
-    paintToDO(currentValue);
-  } else alert("just 5 List!!!");
+  if (cnt < 6) {
+    if (currentValue != "") paintToDO(currentValue);
+    cnt++;
+  } else alert("just 6 List!!!");
   toDoInput.value = "";
 }
 
