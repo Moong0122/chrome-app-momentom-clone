@@ -1,9 +1,9 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
   toDoInput = toDoForm.querySelector("input"),
-  toDoList = document.querySelector(".js-toDoList"),
-  themeList = ["🌘", "🌗", "🌖", "🌔", "🌓", "🌒"];
+  toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = "toDos";
+const TODOS_CNT = "toDoCount";
 let toDos = [],
   cnt = 0;
 
@@ -33,7 +33,7 @@ function paintToDO(text) {
   const delBtn = document.createElement("span");
   const span = document.createElement("span");
   const newId = toDos.length + 1;
-  delBtn.innerText = themeList[cnt];
+  delBtn.innerText = "🚀";
   delBtn.addEventListener("click", deleteToDo);
   span.innerText = ` ${text}`;
   li.appendChild(delBtn);
@@ -52,10 +52,14 @@ function paintToDO(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
-  if (cnt < 6) {
-    if (currentValue != "") paintToDO(currentValue);
-    cnt++;
-  } else alert("just 6 List!!!");
+  if (cnt < 5) {
+    if (currentValue != "") {
+      paintToDO(currentValue);
+      cnt++;
+      localStorage.setItem(TODOS_CNT, [1]);
+      // console.log(localStorage.getItem(toDoCount).length);
+    }
+  } else alert("just 5 List!!!");
   toDoInput.value = "";
 }
 
