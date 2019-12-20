@@ -4,15 +4,13 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
 const TODOS_LS = "toDos";
 const TODOS_CNT = "toDoCount";
-let toDos = [],
-  cnt = 0;
+let toDos = [];
 
 function filterFn(toDo) {
   return toDo.id === 1;
 }
 
 function deleteToDo(event) {
-  cnt--;
   const btn = event.target;
   const li = btn.parentNode;
   toDoList.removeChild(li);
@@ -45,19 +43,16 @@ function paintToDO(text) {
     id: newId
   };
   toDos.push(toDoObj);
-  console.log(cnt);
   saveToDos();
 }
 
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
-  if (cnt < 5) {
+  if (toDos.length < 5) {
     if (currentValue != "") {
       paintToDO(currentValue);
-      cnt++;
-      localStorage.setItem(TODOS_CNT, [1]);
-      // console.log(localStorage.getItem(toDoCount).length);
+      console.log(toDos.length);
     }
   } else alert("just 5 List!!!");
   toDoInput.value = "";
