@@ -1,5 +1,5 @@
 # momentom-clone
-구글 확장 프로그램 모멘텀(momentum)을 직접 만들어보
+구글 확장 프로그램 모멘텀(momentum)을 직접 만들어보기
 
 ## What is momentom?
 momentom is developed on the basis of momentum
